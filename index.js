@@ -79,7 +79,6 @@ function renderGame(){
         }
         else{
             elevenToOne()
-            message = "hit or stand"
             isAlive = true
         }
     }
@@ -125,6 +124,15 @@ function elevenToOne(){
             cards[i] = 1
             total -= 10
         }
+    }
+    if(total = 21){
+        message = "Blackjack"
+        hasBlackjack = true
+        chips += 50
+        chipsEl.textContent = chipsBlank + chips
+    }
+    else{
+        message = "hit or stand"
     }
 }
 
